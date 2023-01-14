@@ -1,0 +1,93 @@
+$black-color: #0b0d17;
+$blue-color: #d0d6f9;
+$white-color: #fff;
+
+@mixin font-face($family, $src, $weight, $style) {
+    font-family: $family;
+    src: url($src);
+    font-weight: $weight;
+    font-style: $style;
+}
+
+body {
+    @include font-face(
+        'Bellefair-Regular',
+        './components/fonts/Bellefair/Bellefair-Regular.ttf',
+        normal,
+        normal
+    );
+    @include font-face(
+        'BarlowCondensed-Regular',
+        './components/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf',
+        normal,
+        normal
+    );
+    @include font-face(
+        'Barlow-Regular',
+        './components/fonts/Barlow/Barlow-Regular.ttf',
+        normal,
+        normal
+    );
+    background-color: $black-color;
+}
+
+@mixin heading-font($size, $family, $letter-spacing: false) {
+    font-size: $size;
+    font-family: $family;
+    @if $letter-spacing {
+        letter-spacing: $letter-spacing;
+    }
+    color: $white-color;
+}
+
+.heading1 {
+    @include heading-font(150px, 'Bellefair-Regular');
+}
+.heading2 {
+    @include heading-font(100px, 'Bellefair-Regular');
+}
+.heading3 {
+    @include heading-font(56px, 'Bellefair-Regular');
+}
+.heading4 {
+    @include heading-font(32px, 'Bellefair-Regular');
+}
+.heading5 {
+    @include heading-font(28px, 'BarlowCondensed-Regular', 4.75px);
+    color: $blue-color;
+}
+
+.sub-heading1 {
+    @include heading-font(28px, 'Bellefair-Regular');
+}
+.sub-heading2 {
+    @include heading-font(14px, 'BarlowCondensed-Regular', 2.35px);
+}
+.nav-text {
+    @include heading-font(16px, 'BarlowCondensed-Regular', 2.7px);
+}
+.body-text {
+    @include heading-font(18px, 'Barlow-Regular');
+}
+.hover-nav {
+    border: 3px solid #979797;
+}
+h1 {
+    @extend .heading1;
+}
+h2 {
+    @extend .heading2;
+}
+h3 {
+    @extend .heading3;
+}
+h4 {
+    @extend .heading4;
+}
+h5 {
+    @extend .heading5;
+}
+
+p {
+    @extend .body-text;
+}

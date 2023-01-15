@@ -1,6 +1,7 @@
 $black-color: #0b0d17;
 $blue-color: #d0d6f9;
 $white-color: #fff;
+$dark-color: #979797;
 
 @mixin font-face($family, $src, $weight, $style) {
     font-family: $family;
@@ -70,7 +71,7 @@ body {
     @include heading-font(18px, 'Barlow-Regular');
 }
 .hover-nav {
-    border: 3px solid #979797;
+    border: 3px solid $dark-color;
 }
 h1 {
     @extend .heading1;

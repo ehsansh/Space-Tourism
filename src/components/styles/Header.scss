@@ -1,8 +1,36 @@
+@import '../../App';
+
 header {
     ul {
         display: flex;
+
+        // position: absolute;
+        // width: 830px;
+        // height: 96px;
+        // left: 610px;
+        // top: 40px;
+
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40.7742px);
     }
     li {
         list-style-type: none;
+        margin: 0 24px;
+        @include heading-font(16px, 'BarlowCondensed-Regular', 2.7px);
+        span.num {
+            margin-right: 12px;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+    div.line {
+        width: 473px;
+        height: 1px;
+        background-color: $dark-color;
     }
 }
+
+/* Rectangle */
+
+/* Note: backdrop-filter has minimal browser support */

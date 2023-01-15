@@ -6,12 +6,14 @@ const Home = () => {
         <div className='Home'>
             <Header active='HOME' />
             <div>
-                <h1>Space</h1>
+                <h5>So, You want to travel to</h5>
+                <h1>SPACE</h1>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Provident, asperiores!
+                    Let's face it: if you want to go to space, you might as well
+                    genuinely go to outer space and not hover kind of on the
+                    edge of it. Well sit back, and relaxe because we'll give you
+                    a truly out of this world experience.
                 </p>
-                <h5>this is h5</h5>
             </div>
         </div>
     );

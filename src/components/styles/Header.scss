@@ -18,7 +18,7 @@ header {
     li {
         list-style-type: none;
         margin: 39px 24px 38px;
-        @include heading-font(16px, 'BarlowCondensed-Regular', 2.7px);
+        @include heading-font(16px, 'Barlow Condensed', 2.7px);
         span.num {
             margin-right: 12px;
         }

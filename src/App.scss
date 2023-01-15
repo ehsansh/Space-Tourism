@@ -1,34 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
 $black-color: #0b0d17;
 $blue-color: #d0d6f9;
 $white-color: #fff;
 $dark-color: #979797;
 
-@mixin font-face($family, $src, $weight, $style) {
-    font-family: $family;
-    src: url($src);
-    font-weight: $weight;
-    font-style: $style;
-}
-
 body {
-    @include font-face(
-        'Bellefair-Regular',
-        './components/fonts/Bellefair/Bellefair-Regular.ttf',
-        normal,
-        normal
-    );
-    @include font-face(
-        'BarlowCondensed-Regular',
-        './components/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf',
-        normal,
-        normal
-    );
-    @include font-face(
-        'Barlow-Regular',
-        './components/fonts/Barlow/Barlow-Regular.ttf',
-        normal,
-        normal
-    );
     background-color: $black-color;
 }
 
@@ -42,33 +19,33 @@ body {
 }
 
 .heading1 {
-    @include heading-font(150px, 'Bellefair-Regular');
+    @include heading-font(150px, 'Bellefair');
 }
 .heading2 {
-    @include heading-font(100px, 'Bellefair-Regular');
+    @include heading-font(100px, 'Bellefair');
 }
 .heading3 {
-    @include heading-font(56px, 'Bellefair-Regular');
+    @include heading-font(56px, 'Bellefair');
 }
 .heading4 {
-    @include heading-font(32px, 'Bellefair-Regular');
+    @include heading-font(32px, 'Bellefair');
 }
 .heading5 {
-    @include heading-font(28px, 'BarlowCondensed-Regular', 4.75px);
+    @include heading-font(28px, 'Barlow Condensed', 4.75px);
     color: $blue-color;
 }
 
 .sub-heading1 {
-    @include heading-font(28px, 'Bellefair-Regular');
+    @include heading-font(28px, 'Bellefair');
 }
 .sub-heading2 {
-    @include heading-font(14px, 'BarlowCondensed-Regular', 2.35px);
+    @include heading-font(14px, 'Barlow Condensed', 2.35px);
 }
 .nav-text {
-    @include heading-font(16px, 'BarlowCondensed-Regular', 2.7px);
+    @include heading-font(16px, 'Barlow Condensed', 2.7px);
 }
 .body-text {
-    @include heading-font(18px, 'Barlow-Regular');
+    @include heading-font(18px, 'Barlow');
 }
 .hover-nav {
     border: 3px solid $dark-color;

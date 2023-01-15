@@ -1,5 +1,13 @@
 @import '../../App';
 
+.bottom-border {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 55px;
+    height: 3px;
+}
+
 header {
     nav {
         display: flex;
@@ -30,13 +38,22 @@ header {
         span.num {
             font-weight: bold;
         }
+
         &.active:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 55px;
-            height: 3px;
+            @extend .bottom-border;
             background-color: $white-color;
+            width: 100%;
+        }
+        &:after {
+            @extend .bottom-border;
+            width: 0;
+            left: 50%;
+            transition: all 0.3s ease;
+        }
+        &:hover:not(.active):after {
+            @extend .bottom-border;
+            background-color: $dark-color;
+            left: 0;
             width: 100%;
         }
     }

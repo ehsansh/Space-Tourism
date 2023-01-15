@@ -13,8 +13,11 @@ const Header = ({ active }) => {
                 <div className='line'></div>
                 <ul>
                     {liList.map((val, i) => (
-                        <li key={i} className={active === val ? 'active' : ''}>
-                            <Link className='' to='/'>
+                        <li key={i}>
+                            <Link
+                                className={active === val ? 'active' : ''}
+                                to='/'
+                            >
                                 <span className='num'>0{i}</span>
                                 <span className='text'>{val}</span>
                             </Link>

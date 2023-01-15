@@ -1,21 +1,23 @@
 @import '../../App';
 
 header {
+    nav {
+        display: flex;
+        justify-content: center;
+        > * {
+            flex-grow: 1;
+        }
+    }
     ul {
         display: flex;
-
-        // position: absolute;
-        // width: 830px;
-        // height: 96px;
-        // left: 610px;
-        // top: 40px;
-
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(40.7742px);
+        margin: 40px 0 0;
+        width: auto;
     }
     li {
         list-style-type: none;
-        margin: 0 24px;
+        margin: 39px 24px 38px;
         @include heading-font(16px, 'BarlowCondensed-Regular', 2.7px);
         span.num {
             margin-right: 12px;
@@ -23,14 +25,31 @@ header {
     }
     a {
         text-decoration: none;
+        padding: 2px 0;
+        position: relative;
+        span.num {
+            font-weight: bold;
+        }
+        &.active:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 55px;
+            height: 3px;
+            background-color: $white-color;
+            width: 100%;
+        }
     }
     div.line {
-        width: 473px;
+        width: 27%;
         height: 1px;
         background-color: $dark-color;
+        margin-top: 88px;
+        position: relative;
+        left: 2%;
+        z-index: 2;
+    }
+    div.logo {
+        margin: 64px 0 0 55px;
     }
 }
-
-/* Rectangle */
-
-/* Note: backdrop-filter has minimal browser support */

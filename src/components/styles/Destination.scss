@@ -120,3 +120,20 @@
         }
     }
 }
+
+@media (max-width: 450px) {
+    .Destination {
+        div.container {
+            img {
+                width: 80%;
+            }
+        }
+        div.details {
+            display: block;
+            margin-bottom: 58px;
+            > div:first-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

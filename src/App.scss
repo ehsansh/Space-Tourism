@@ -96,8 +96,7 @@ h1.step {
     }
 }
 
-@media (max-width: 2000px) {
-    // @media (max-width: 850px) {
+@media (max-width: 850px) {
     h1.step {
         font-size: 20px !important;
         margin-left: 38px;
@@ -114,6 +113,12 @@ h1.step {
 @media (max-width: 470px) {
     h1 {
         font-size: 80px;
+    }
+    h1.step {
+        font-size: 16px !important;
+    }
+    h2 {
+        font-size: 56px;
     }
     h5 {
         font-size: 16px !important;

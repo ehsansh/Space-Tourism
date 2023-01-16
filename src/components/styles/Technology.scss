@@ -7,7 +7,7 @@
     min-height: 100vh;
     div.container {
         display: flex;
-        justify-content: center;
+        justify-content: end;
         .terminology {
             @extend .nav-text;
             color: $blue-color;
@@ -19,8 +19,23 @@
             line-height: 32px;
             color: $blue-color;
         }
+        div.img {
+            margin-top: 136px;
+            margin-bottom: 101px;
+        }
+        div.text {
+            width: 600px;
+            margin-right: 130px;
+        }
+        div.content {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 137px;
+        }
         ul.menu {
             list-style-type: none;
+            margin-right: 80px;
+            padding-left: 0;
             li {
                 font-size: 32px;
                 font-family: 'Bellefair';
@@ -37,6 +52,7 @@
                 opacity: 0.25;
                 cursor: pointer;
                 margin-bottom: 32px;
+                transition: all 0.3s ease-out;
                 &.active {
                     background-color: $white-color;
                     color: $black-color;

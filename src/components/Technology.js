@@ -11,7 +11,7 @@ const Technology = () => {
 
     const changeTech = name => {
         setCurrentTech(name);
-        // setFade(true);
+        setFade(true);
     };
 
     return (
@@ -46,7 +46,10 @@ const Technology = () => {
                         </section>
                     </div>
                 </div>
-                <div className='img'>
+                <div
+                    className={`img ${fade ? 'fade' : ''}`}
+                    onAnimationEnd={() => setFade(false)}
+                >
                     <img
                         src={require(`${data.images.portrait}`)}
                         alt={data.name}

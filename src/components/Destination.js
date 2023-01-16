@@ -21,9 +21,9 @@ const Destination = () => {
             <Header active='DESTINATION' />
             <div className='container'>
                 <div className='title'>
-                    <h1>
+                    <h1 className='step'>
                         <span className='num'>01</span>
-                        PICK YOUR DESTINATION
+                        Pick your destination
                     </h1>
                     <img
                         className={`${fade ? 'fade' : ''}`}

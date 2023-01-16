@@ -1,0 +1,52 @@
+@import '../../App';
+
+.Crew {
+    background-image: url('../images/background-crew-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    div.container {
+        display: flex;
+        justify-content: center;
+        div.img {
+            width: 615px;
+            margin-top: 158px;
+        }
+        div.text {
+            width: 545px;
+            margin-right: 10px;
+        }
+        h4 {
+            text-transform: uppercase;
+            color: $dark-color;
+            margin-top: 154px;
+            margin-bottom: 0;
+        }
+        h3 {
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-top: 15px;
+        }
+        p {
+            line-height: 32px;
+            color: $blue-color;
+        }
+    }
+    ul.dots {
+        list-style-type: none;
+        display: flex;
+        margin-top: 120px;
+        padding-left: 4px;
+        li {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            background-color: $dark-color;
+            margin-right: 24px;
+            cursor: pointer;
+            &.active {
+                background-color: $white-color;
+            }
+        }
+    }
+}

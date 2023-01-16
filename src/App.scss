@@ -73,3 +73,26 @@ p {
 * {
     color: $white-color;
 }
+
+h1.step {
+    @extend .heading5;
+    color: $white-color;
+    margin-top: 76px;
+    text-transform: uppercase;
+    span.num {
+        color: $dark-color;
+        margin-right: 28px;
+    }
+}
+
+.fade {
+    animation: fadein 1s ease-in-out;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

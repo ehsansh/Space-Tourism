@@ -16,7 +16,11 @@ const Header = ({ active }) => {
                         <li key={i}>
                             <Link
                                 className={active === val ? 'active' : ''}
-                                to='/'
+                                to={`/${
+                                    val !== 'HOME'
+                                        ? val.toLocaleLowerCase()
+                                        : ''
+                                }`}
                             >
                                 <span className='num'>0{i}</span>
                                 <span className='text'>{val}</span>

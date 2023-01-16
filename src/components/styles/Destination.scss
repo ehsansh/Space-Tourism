@@ -1,0 +1,64 @@
+@import '../../App';
+.Destination {
+    div.container {
+        display: flex;
+        justify-content: space-around;
+    }
+    section.intro {
+        width: 445px;
+        margin-top: 174px;
+        margin-bottom: 118px;
+        p {
+            line-height: 32px;
+            color: $blue-color;
+            margin: 0 auto 54px;
+        }
+    }
+    div.details {
+        display: flex;
+        justify-content: flex-start;
+        text-transform: uppercase;
+        > div {
+            margin-right: 79px;
+        }
+        div.subheading2 {
+            color: $blue-color;
+            margin: 28px auto 12px;
+        }
+    }
+    ul.menu {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-right: 36px;
+            cursor: pointer;
+            padding-bottom: 12px;
+            color: $blue-color;
+            text-transform: uppercase;
+            &.active {
+                border-bottom: 3px solid $white-color;
+                color: $white-color;
+            }
+            &:hover:not(.active) {
+                border-bottom: 3px solid $dark-color;
+            }
+        }
+    }
+    h5 {
+        color: $white-color;
+        margin-top: 76px;
+        span.num {
+            color: $dark-color;
+            margin-right: 28px;
+        }
+    }
+    h1 {
+        margin: 37px auto 14px;
+    }
+    hr {
+        color: #383b4b;
+        margin-bottom: 28px;
+    }
+}

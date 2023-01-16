@@ -9,9 +9,16 @@
 }
 
 .Destination {
+    background-image: url('../images/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
     div.container {
         display: flex;
         justify-content: space-around;
+        img {
+            margin-top: 70px;
+        }
     }
     section.intro {
         width: 445px;
@@ -27,12 +34,16 @@
         display: flex;
         justify-content: flex-start;
         text-transform: uppercase;
-        > div {
+        > div:first-child {
             margin-right: 79px;
         }
-        div.subheading2 {
+        div.property {
+            @extend .sub-heading2;
             color: $blue-color;
             margin: 28px auto 12px;
+        }
+        div.value {
+            @extend .sub-heading1;
         }
     }
     ul.menu {

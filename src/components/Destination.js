@@ -3,6 +3,10 @@ import Header from './Header';
 
 import './styles/Destination.scss';
 
+import { destinations } from './data/data';
+
+console.log(destinations);
+
 const Destination = () => {
     return (
         <div className='Destination'>

@@ -53,3 +53,22 @@
         line-height: 32px;
     }
 }
+
+@media (max-width: 768px) {
+    .Home {
+        background-image: url('../images/background-home-tablet.jpg');
+        background-position: center;
+        div.container {
+            display: block;
+            div.text {
+                margin: 106px auto 156px;
+                text-align: center;
+                width: 450px;
+            }
+            a.explore-btn {
+                margin: 0 auto;
+            }
+            padding-bottom: 90px;
+        }
+    }
+}

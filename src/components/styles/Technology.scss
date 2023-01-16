@@ -1,0 +1,51 @@
+@import '../../App';
+
+.Technology {
+    background-image: url('../images/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    div.container {
+        display: flex;
+        justify-content: center;
+        .terminology {
+            @extend .nav-text;
+            color: $blue-color;
+        }
+        h3 {
+            text-transform: uppercase;
+        }
+        p {
+            line-height: 32px;
+            color: $blue-color;
+        }
+        ul.menu {
+            list-style-type: none;
+            li {
+                font-size: 32px;
+                font-family: 'Bellefair';
+                color: $white-color;
+                mix-blend-mode: normal;
+                border: 1px solid $white-color;
+                box-sizing: border-box;
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                text-align: center;
+                line-height: 76px;
+                mix-blend-mode: normal;
+                opacity: 0.25;
+                cursor: pointer;
+                margin-bottom: 32px;
+                &.active {
+                    background-color: $white-color;
+                    color: $black-color;
+                    opacity: 1;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

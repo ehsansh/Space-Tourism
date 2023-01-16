@@ -41,11 +41,17 @@
             width: 15px;
             height: 15px;
             border-radius: 15px;
-            background-color: $dark-color;
+            background-color: $white-color;
+            opacity: 0.17;
             margin-right: 24px;
             cursor: pointer;
+            transition: all 0.3s ease-out;
             &.active {
-                background-color: $white-color;
+                opacity: 1;
+            }
+            &:hover:not(.active) {
+                mix-blend-mode: normal;
+                opacity: 0.5;
             }
         }
     }

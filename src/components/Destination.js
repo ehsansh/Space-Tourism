@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 
 import './styles/Destination.scss';
@@ -8,39 +8,49 @@ import { destinations } from './data/data';
 console.log(destinations);
 
 const Destination = () => {
+    const [currectDestination, setCurrentDestination] = useState('Moon');
+
+    let data = destinations.filter(d => d.name === currectDestination)[0];
+
+    console.log(data);
+
     return (
         <div className='Destination'>
             <Header active='DESTINATION' />
             <div className='container'>
                 <div className='title'>
-                    <h5>
+                    <h1>
                         <span className='num'>01</span>
                         PICK YOUR DESTINATION
-                    </h5>
+                    </h1>
                 </div>
                 <section className='intro'>
                     <ul className='menu'>
-                        <li className='active nav-text'>MOON</li>
-                        <li className='nav-text'>EUROPA</li>
-                        <li className='nav-text'>MARS</li>
-                        <li className='nav-text'>TITAN</li>
+                        {destinations.map((d, i) => (
+                            <li
+                                key={i}
+                                className={`nav-text ${
+                                    d.name === currectDestination
+                                        ? 'active'
+                                        : ''
+                                }`}
+                                onClick={() => setCurrentDestination(d.name)}
+                            >
+                                {d.name}
+                            </li>
+                        ))}
                     </ul>
-                    <h1>MOON</h1>
-                    <p>
-                        See our planet as you’ve never seen it before. A perfect
-                        relaxing trip away to help regain perspective and come
-                        back refreshed. While you’re there, take in some history
-                        by visiting the Luna 2 and Apollo 11 landing sites.
-                    </p>
+                    <h2>{data.name}</h2>
+                    <p>{data.description}</p>
                     <hr />
                     <div className='details'>
                         <div>
                             <div className='subheading2'>Average distance</div>
-                            <div className='subheading1'>384,400 km</div>
+                            <div className='subheading1'>{data.distance}</div>
                         </div>
                         <div>
                             <div className='subheading2'>est. travel time</div>
-                            <div className='subheading1'>3 days</div>
+                            <div className='subheading1'>{data.travel}</div>
                         </div>
                     </div>
                 </section>

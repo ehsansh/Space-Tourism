@@ -7,9 +7,14 @@ import { destinations } from './data/data';
 
 const Destination = () => {
     const [currectDestination, setCurrentDestination] = useState('Moon');
-    const [change, setChange] = useState('');
+    const [fade, setFade] = useState(false);
 
     let data = destinations.filter(d => d.name === currectDestination)[0];
+
+    const changeDestination = val => {
+        setCurrentDestination(val);
+        setFade(true);
+    };
 
     return (
         <div className='Destination'>
@@ -20,7 +25,11 @@ const Destination = () => {
                         <span className='num'>01</span>
                         PICK YOUR DESTINATION
                     </h1>
-                    <img src={require(`${data.images.png}`)} alt={data.name} />
+                    <img
+                        className={`${fade ? 'fade' : ''}`}
+                        src={require(`${data.images.png}`)}
+                        alt={data.name}
+                    />
                 </div>
                 <section className='intro'>
                     <ul className='menu'>
@@ -32,13 +41,16 @@ const Destination = () => {
                                         ? 'active'
                                         : ''
                                 }`}
-                                onClick={() => setCurrentDestination(d.name)}
+                                onClick={() => changeDestination(d.name)}
                             >
                                 {d.name}
                             </li>
                         ))}
                     </ul>
-                    <div className='intro-content'>
+                    <div
+                        className={`intro-content ${fade ? 'fade' : ''}`}
+                        onAnimationEnd={() => setFade(false)}
+                    >
                         <h2>{data.name}</h2>
                         <p>{data.description}</p>
                         <hr />

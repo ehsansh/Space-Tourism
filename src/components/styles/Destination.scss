@@ -94,4 +94,16 @@
         color: #383b4b;
         margin-bottom: 28px;
     }
+    .fade {
+        animation: fadein 1s ease-in-out;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

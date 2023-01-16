@@ -86,3 +86,37 @@
         margin-bottom: 28px;
     }
 }
+
+@media (max-width: 850px) {
+    .Destination {
+        background-image: url('../images/background-destination-tablet.jpg');
+        background-position: center;
+        div.container {
+            display: block;
+            img {
+                margin: 32px auto 47px;
+                display: block;
+            }
+        }
+        section.intro {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            p {
+                margin-bottom: 49px;
+                line-height: 28px;
+            }
+        }
+        ul.menu,
+        div.details {
+            justify-content: center;
+            margin-bottom: 62px;
+        }
+        h2 {
+            margin: 32px auto 8px;
+        }
+        hr {
+            margin-bottom: 0;
+        }
+    }
+}

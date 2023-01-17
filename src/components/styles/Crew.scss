@@ -10,7 +10,7 @@
         justify-content: center;
         div.img {
             width: 615px;
-            margin-top: 158px;
+            // margin-top: 158px;
         }
         div.text {
             width: 545px;
@@ -96,7 +96,7 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 470px) {
     .Crew {
         background-image: url('../images/background-crew-mobile.jpg');
         div.container {

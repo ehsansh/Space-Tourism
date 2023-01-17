@@ -15,7 +15,7 @@ const Technology = () => {
     };
 
     let src =
-        window.innerWidth > 2000 ? data.images.portrait : data.images.landscape;
+        window.innerWidth > 850 ? data.images.portrait : data.images.landscape;
 
     return (
         <div className='Technology'>

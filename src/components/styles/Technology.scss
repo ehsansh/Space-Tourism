@@ -11,6 +11,7 @@
         .terminology {
             @extend .nav-text;
             color: $blue-color;
+            text-transform: uppercase;
         }
         h3 {
             text-transform: uppercase;
@@ -101,10 +102,22 @@
                 img {
                     display: block;
                     margin: 0 auto;
+                    width: 100%;
                 }
             }
             p {
                 padding: 0 120px 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .Technology {
+        background-image: url('../images/background-technology-mobile.jpg');
+        div.container {
+            div.terminology {
+                font-size: 14px;
             }
         }
     }

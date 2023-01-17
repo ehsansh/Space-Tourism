@@ -87,12 +87,22 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .Destination div.container {
+        padding: 0 20px;
+        img {
+            margin-right: 20px;
+        }
+    }
+}
+
 @media (max-width: 850px) {
     .Destination {
         background-image: url('../images/background-destination-tablet.jpg');
         background-position: center;
         div.container {
             display: block;
+            padding: 0;
             img {
                 margin: 32px auto 47px;
                 display: block;

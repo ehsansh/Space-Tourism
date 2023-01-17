@@ -49,6 +49,38 @@ const Crew = () => {
                     />
                 </div>
             </div>
+            <div className='container-mobile container'>
+                <div className='text'>
+                    <h1 className='step'>
+                        <span className='num'>02</span>
+                        Meet your crew
+                    </h1>
+                    <div
+                        className={`img ${fade ? 'fade' : ''}`}
+                        onAnimationEnd={() => setFade(false)}
+                    >
+                        <img
+                            width='90%'
+                            src={require(`${data.images.png}`)}
+                            alt={data.name}
+                        />
+                    </div>
+                    <ul className='dots'>
+                        {crew.map((val, i) => (
+                            <li
+                                key={i}
+                                onClick={() => changeCrew(val.name)}
+                                className={`${
+                                    val.name === currectCrew ? 'active' : ''
+                                }`}
+                            ></li>
+                        ))}
+                    </ul>
+                    <h4>{data.role}</h4>
+                    <h3>{data.name} </h3>
+                    <p> {data.bio}</p>
+                </div>
+            </div>
         </div>
     );
 };

@@ -56,3 +56,63 @@
         }
     }
 }
+
+// @media (max-width: 2000px) {
+@media (max-width: 850px) {
+    .Crew {
+        background-image: url('../images/background-crew-tablet.jpg');
+        div.container {
+            display: block;
+            div.text {
+                width: 100%;
+            }
+            p,
+            h4,
+            h3 {
+                text-align: center;
+            }
+            p {
+                width: 70%;
+                margin: 0 auto;
+            }
+            h4 {
+                margin-top: 60px;
+            }
+            div.img {
+                width: 433px;
+                margin: 40px auto 0;
+            }
+            p {
+                line-height: 28px;
+            }
+        }
+        ul.dots {
+            justify-content: center;
+            margin-top: 40px;
+        }
+        div.container-mobile {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .Crew {
+        background-image: url('../images/background-crew-mobile.jpg');
+        div.container-mobile.container {
+            display: block;
+            h4 {
+                margin-top: 32px;
+            }
+            p {
+                padding-bottom: 54px;
+            }
+        }
+        div.container {
+            display: none;
+        }
+        ul.dots {
+            margin-top: 32px;
+        }
+    }
+}

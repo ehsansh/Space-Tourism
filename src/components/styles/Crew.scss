@@ -55,6 +55,9 @@
             }
         }
     }
+    h1.step {
+        margin-left: 104px;
+    }
 }
 
 // @media (max-width: 2000px) {
@@ -90,26 +93,26 @@
             justify-content: center;
             margin-top: 40px;
         }
-        div.container-mobile {
-            display: none;
-        }
     }
 }
 
 @media (max-width: 450px) {
     .Crew {
         background-image: url('../images/background-crew-mobile.jpg');
-        div.container-mobile.container {
-            display: block;
+        div.container {
+            display: flex;
+            flex-direction: column-reverse;
             h4 {
                 margin-top: 32px;
             }
             p {
                 padding-bottom: 54px;
             }
-        }
-        div.container {
-            display: none;
+            div.text {
+                margin-right: 0;
+                display: flex;
+                flex-direction: column-reverse;
+            }
         }
         ul.dots {
             margin-top: 32px;

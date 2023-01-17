@@ -14,15 +14,18 @@ const Technology = () => {
         setFade(true);
     };
 
+    let src =
+        window.innerWidth > 2000 ? data.images.portrait : data.images.landscape;
+
     return (
         <div className='Technology'>
             <Header active='TECHNOLOGY' />
+            <h1 className='step'>
+                <span className='num'>03</span>
+                Sapce launch 101
+            </h1>
             <div className='container'>
                 <div className='text'>
-                    <h1 className='step'>
-                        <span className='num'>03</span>
-                        Sapce launch 101
-                    </h1>
                     <div className='content'>
                         <ul className='menu'>
                             {technology.map((t, i) => (
@@ -50,10 +53,7 @@ const Technology = () => {
                     className={`img ${fade ? 'fade' : ''}`}
                     onAnimationEnd={() => setFade(false)}
                 >
-                    <img
-                        src={require(`${data.images.portrait}`)}
-                        alt={data.name}
-                    />
+                    <img src={require(`${src}`)} alt={data.name} />
                 </div>
             </div>
         </div>

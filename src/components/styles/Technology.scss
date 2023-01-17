@@ -65,3 +65,28 @@
         }
     }
 }
+
+@media (max-width: 2000px) {
+    .Technology {
+        div.container {
+            flex-direction: column-reverse;
+            div.text {
+                width: 100%;
+                text-align: center;
+            }
+            div.content {
+                flex-direction: column;
+            }
+            ul.menu {
+                display: flex;
+                justify-content: center;
+            }
+            div.img {
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

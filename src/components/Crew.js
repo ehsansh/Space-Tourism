@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import './styles/Crew.scss';
 
@@ -13,6 +13,10 @@ const Crew = () => {
         setCurrentCrew(name);
         setFade(true);
     };
+
+    useEffect(() => {
+        document.title = 'Crew';
+    }, []);
 
     return (
         <div className='Crew'>

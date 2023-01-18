@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import './styles/Technology.scss';
 
@@ -16,6 +16,10 @@ const Technology = () => {
 
     let src =
         window.innerWidth > 850 ? data.images.portrait : data.images.landscape;
+
+    useEffect(() => {
+        document.title = 'Technology';
+    }, []);
 
     return (
         <div className='Technology'>

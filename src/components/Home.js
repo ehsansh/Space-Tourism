@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import './styles/Home.scss';
 const Home = () => {
+    useEffect(() => {
+        document.title = 'Space Tourism';
+    }, []);
+
     return (
         <div className='Home'>
             <Header active='HOME' />

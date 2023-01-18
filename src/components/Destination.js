@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 
 import './styles/Destination.scss';
@@ -15,6 +15,10 @@ const Destination = () => {
         setCurrentDestination(val);
         setFade(true);
     };
+
+    useEffect(() => {
+        document.title = 'Destination';
+    }, []);
 
     return (
         <div className='Destination'>
